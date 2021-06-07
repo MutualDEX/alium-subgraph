@@ -33,7 +33,7 @@ type _Schema_
   )
 
 """
-PancakeSwap Factory
+Alium Factory
 """
 type Factory @entity {
   "ID (address)"
@@ -47,7 +47,7 @@ type Factory @entity {
 }
 
 """
-PancakeSwap Pairs (Pancake LPs - Cake-LP)
+Alium Pairs (Alium LPs - Cake-LP)
 """
 type Pair @entity {
   "ID (address)"
@@ -70,7 +70,7 @@ type Pair @entity {
 }
 
 """
-PancakeSwap Tokens
+Alium Tokens
 """
 type Token @entity {
   "ID (address)"

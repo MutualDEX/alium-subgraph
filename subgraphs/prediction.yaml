@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Pancake Prediction
-repository: https://github.com/pancakeswap
+description: Alium Prediction
+repository: https://github.com/Alium-Finance/alium-subgraph
 schema:
   file: ./prediction.graphql
 dataSources:

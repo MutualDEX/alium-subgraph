@@ -3,7 +3,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_pancakeProfileAddress",
+        "name": "_aliumProfileAddress",
         "type": "address"
       },
       {
@@ -260,10 +260,10 @@
   },
   {
     "inputs": [],
-    "name": "pancakeProfile",
+    "name": "aliumProfile",
     "outputs": [
       {
-        "internalType": "contract IPancakeProfile",
+        "internalType": "contract IAliumProfile",
         "name": "",
         "type": "address"
       }
