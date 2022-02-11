@@ -1,5 +1,5 @@
 /* eslint-disable prefer-const */
-import { AliumFactory, Pair, Token, Bundle } from "../../generated/schema";
+import { BigSwapFactory, Pair, Token, Bundle } from "../../generated/schema";
 import { Pair as PairTemplate } from "../../generated/templates";
 import { PairCreated } from "../../generated/Factory/Factory";
 import {
@@ -13,9 +13,9 @@ import {
 } from "./utils";
 
 export function handlePairCreated(event: PairCreated): void {
-  let factory = AliumFactory.load(FACTORY_ADDRESS);
+  let factory = BigSwapFactory.load(FACTORY_ADDRESS);
   if (factory === null) {
-    factory = new AliumFactory(FACTORY_ADDRESS);
+    factory = new BigSwapFactory(FACTORY_ADDRESS);
     factory.totalPairs = ZERO_BI;
     factory.totalTransactions = ZERO_BI;
     factory.totalVolumeBNB = ZERO_BD;
