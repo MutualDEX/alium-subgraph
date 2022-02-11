@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Alium Trading Competition V1
+description: BigSwap Trading Competition V1
 repository: https://github.com/Alium-Finance/alium-subgraph
 schema:
   file: ./trading.graphql
