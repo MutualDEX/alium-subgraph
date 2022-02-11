@@ -33,7 +33,7 @@ type _Schema_
   )
 
 """
-Alium Factory
+BigSwap Factory
 """
 type Factory @entity {
   "ID (address)"
@@ -47,7 +47,7 @@ type Factory @entity {
 }
 
 """
-Alium Pairs (Alium LPs - Cake-LP)
+BigSwap Pairs (Alium LPs - Cake-LP)
 """
 type Pair @entity {
   "ID (address)"
@@ -70,7 +70,7 @@ type Pair @entity {
 }
 
 """
-Alium Tokens
+BigSwap Tokens
 """
 type Token @entity {
   "ID (address)"
