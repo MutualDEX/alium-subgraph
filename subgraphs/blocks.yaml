@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 description: Binance Smart Chain blocks
-repository: https://github.com/Alium-Finance/alium-subgraph
+repository: https://github.com/BigSwap-Finance/bigswap-subgraph
 schema:
   file: ./blocks.graphql
 dataSources:
@@ -8,7 +8,7 @@ dataSources:
     name: BSCValidatorSet
     network: bsc
     source:
-      address: '0x7ac8a920cf1f7e7cc4f698c9c5cbc1e26f604790'
+      address: '0xe9f861b22cd5240494ecc14afea02659ec59864f'
       abi: BSCValidatorSet
       startBlock: 6962690
     mapping:
