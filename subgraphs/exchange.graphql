@@ -1,4 +1,4 @@
-type AliumFactory @entity {
+type BigSwapFactory @entity {
   id: ID!
 
   "Total of pairs"
