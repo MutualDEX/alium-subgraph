@@ -1,5 +1,5 @@
 specVersion: 0.0.2
-description: Alium Prediction
+description: BigSWap Prediction
 repository: https://github.com/Alium-Finance/alium-subgraph
 schema:
   file: ./prediction.graphql
