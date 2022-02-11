@@ -1,31 +1,31 @@
 /* eslint-disable prefer-const */
 import { PairHourData } from "../../generated/schema";
 import { BigInt, BigDecimal, ethereum } from "@graphprotocol/graph-ts";
-import { Pair, Bundle, Token, AliumFactory, AliumDayData, PairDayData, TokenDayData } from "../../generated/schema";
+import { Pair, Bundle, Token, BigSwapFactory, BigSwapDayData, PairDayData, TokenDayData } from "../../generated/schema";
 import { ONE_BI, ZERO_BD, ZERO_BI, FACTORY_ADDRESS } from "./utils";
 
-export function updateAliumDayData(event: ethereum.Event): AliumDayData {
-  let alium = AliumFactory.load(FACTORY_ADDRESS);
+export function updateBigSwapDayData(event: ethereum.Event): BigSwapDayData {
+  let bigswap = BigSwapFactory.load(FACTORY_ADDRESS);
   let timestamp = event.block.timestamp.toI32();
   let dayID = timestamp / 86400;
   let dayStartTimestamp = dayID * 86400;
 
-  let aliumDayData = AliumDayData.load(dayID.toString());
-  if (aliumDayData === null) {
-    aliumDayData = new AliumDayData(dayID.toString());
-    aliumDayData.date = dayStartTimestamp;
-    aliumDayData.dailyVolumeUSD = ZERO_BD;
-    aliumDayData.dailyVolumeBNB = ZERO_BD;
-    aliumDayData.totalVolumeUSD = ZERO_BD;
-    aliumDayData.totalVolumeBNB = ZERO_BD;
-    aliumDayData.dailyVolumeUntracked = ZERO_BD;
+  let bigswapDayData = BigSwapDayData.load(dayID.toString());
+  if (bigswapDayData === null) {
+    bigswapDayData = new BigSwapDayData(dayID.toString());
+    bigswapDayData.date = dayStartTimestamp;
+    bigswapDayData.dailyVolumeUSD = ZERO_BD;
+    bigswapDayData.dailyVolumeBNB = ZERO_BD;
+    bigswapDayData.totalVolumeUSD = ZERO_BD;
+    bigswapDayData.totalVolumeBNB = ZERO_BD;
+    bigswapDayData.dailyVolumeUntracked = ZERO_BD;
   }
-  aliumDayData.totalLiquidityUSD = alium.totalLiquidityUSD;
-  aliumDayData.totalLiquidityBNB = alium.totalLiquidityBNB;
-  aliumDayData.totalTransactions = alium.totalTransactions;
-  aliumDayData.save();
+  bigswapDayData.totalLiquidityUSD = bigswap.totalLiquidityUSD;
+  bigswapDayData.totalLiquidityBNB = bigswap.totalLiquidityBNB;
+  bigswapDayData.totalTransactions = bigswap.totalTransactions;
+  bigswapDayData.save();
 
-  return aliumDayData as AliumDayData;
+  return bigswapDayData as BigSwapDayData;
 }
 
 export function updatePairDayData(event: ethereum.Event): PairDayData {
