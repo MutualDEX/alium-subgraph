@@ -1,6 +1,6 @@
 specVersion: 0.0.2
-description: Alium is a decentralized protocol for automated token exchange on Binance Smart Chain.
-repository: https://github.com/Alium-Finance/alium-subgraph
+description: BigSwap is a decentralized protocol for automated token exchange on Binance Smart Chain.
+repository: https://github.com/BigSwap-Finance/bigswap-subgraph
 schema:
   file: ./exchange.graphql
 dataSources:
@@ -8,7 +8,7 @@ dataSources:
     name: Factory
     network: bsc
     source:
-      address: '0xbEAC7e750728e865A3cb39D5ED6E3A3044ae4B98'
+      address: '0x6b549d011FA0409B12329b618214837c0735dB85'
       abi: Factory
       startBlock: 7600000
     mapping:
